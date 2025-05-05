@@ -1,0 +1,275 @@
+/* Стили для системы вкладок */
+.tab-navigation {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    overflow-x: auto;
+}
+
+.tab-item {
+    position: relative;
+    display: block;
+    padding: 12px 20px;
+    margin-bottom: -1px;
+    background-color: #f8f9fc;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #6e707e;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab-item:hover {
+    background-color: #eaecf4;
+    color: #3a3b45;
+}
+
+.tab-item.active {
+    background-color: #fff;
+    border-color: #e3e6f0 #e3e6f0 #fff;
+    color: #4e73df;
+}
+
+.tab-item i {
+    margin-right: 5px;
+}
+
+.tab-content {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+/* Стили для карточек KPI */
+.kpi-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.kpi-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4e73df;
+}
+
+.kpi-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #5a5c69;
+}
+
+.kpi-label {
+    font-size: 14px;
+    color: #858796;
+    margin-bottom: 10px;
+}
+
+.kpi-trend {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.trend-up {
+    color: #1cc88a;
+}
+
+.trend-down {
+    color: #e74a3b;
+}
+
+/* Стили для карточек дашборда */
+.dashboard-card {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 20px;
+}
+
+.dashboard-card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e3e6f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-card-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5a5c69;
+    margin: 0;
+}
+
+/* Стили для таблиц */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table thead th {
+    background-color: #f8f9fc;
+    color: #6e707e;
+    padding: 12px 15px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.dashboard-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e3e6f0;
+    color: #5a5c69;
+    font-size: 14px;
+}
+
+/* Стили для статусов */
+.status-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active {
+    background-color: rgba(28, 200, 138, 0.2);
+    color: #1cc88a;
+}
+
+.status-pending {
+    background-color: rgba(246, 194, 62, 0.2);
+    color: #f6c23e;
+}
+
+.status-completed {
+    background-color: rgba(78, 115, 223, 0.2);
+    color: #4e73df;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для фильтров */
+.dashboard-filters {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fc;
+    border-radius: 8px;
+}
+
+.period-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.period-button {
+    background-color: #fff;
+    border: 1px solid #d1d3e2;
+    color: #6e707e;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.period-button:hover {
+    background-color: #eaecf4;
+}
+
+.period-button.active {
+    background-color: #4e73df;
+    color: #fff;
+    border-color: #4e73df;
+}
+
+/* Стили для легенды графиков */
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 992px) {
+    .chart-container {
+        height: 160px;
+    }
+    
+    .kpi-card {
+        min-width: 45%;
+    }
+    
+    .tab-item {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .kpi-card {
+        min-width: 100%;
+    }
+}
